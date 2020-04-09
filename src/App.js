@@ -48,7 +48,8 @@ const Copy = styled.div`
 `;
 
 const HiddenInput = styled.input`
-    display: none;
+    position: fixed;
+    opacity: 0;
 `;
 
 const App = () => {
@@ -138,7 +139,7 @@ const App = () => {
                 />
             </Container>
             <CodePreviewer>
-                <HiddenInput id="border-radius" value={`border-radius: ${borderRadius};`} onChange={() => { }} />
+                <HiddenInput id="border-radius" type="text" value={`border-radius: ${borderRadius};`} onChange={() => { }} />
                 <Code>border-radius: {borderRadius};</Code>
                 <Copy onClick={copy}>Copy</Copy>
             </CodePreviewer>
